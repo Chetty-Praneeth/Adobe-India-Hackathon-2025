@@ -64,16 +64,16 @@ Our solution uses a lightweight, modular pipeline that mimics human document rea
 Each PDF generates a JSON file in the following format:
 
     ```json
-{
-  "title": "Detected Title",
-  "outline": [
     {
-      "level": "H1" | "H2" | "H3",
-      "text": "Heading Text",
-      "page": PageNumber
+    "title": "Detected Title",
+    "outline": [
+        {
+        "level": "H1" | "H2" | "H3",
+        "text": "Heading Text",
+        "page": PageNumber
+        }
+    ]
     }
-  ]
-}
 --- 
 
 Output is saved to sample_dataset/output/ and validated against output_schema.json.
