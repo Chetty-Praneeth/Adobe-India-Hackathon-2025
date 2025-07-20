@@ -63,7 +63,7 @@ Our solution uses a lightweight, modular pipeline that mimics human document rea
 
 Each PDF generates a JSON file in the following format:
 
-```json
+    ```json
 {
   "title": "Detected Title",
   "outline": [
