@@ -40,7 +40,7 @@ Our solution uses a lightweight, modular pipeline that mimics human document rea
 
 ---
 
-## 📦 Models and Libraries Used
+## Models and Libraries Used
 
 | Library           | Usage                                |
 |-------------------|---------------------------------------|
