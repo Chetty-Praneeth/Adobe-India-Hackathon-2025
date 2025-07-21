@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Learn Acrobat - Create and Convert_1.pdf",
+      "Learn Acrobat - Create and Convert_2.pdf",
+      "Learn Acrobat - Edit_1.pdf",
+      "Learn Acrobat - Edit_2.pdf",
+      "Learn Acrobat - Export_1.pdf",
+      "Learn Acrobat - Export_2.pdf",
+      "Learn Acrobat - Fill and Sign.pdf",
+      "Learn Acrobat - Generative AI_1.pdf",
+      "Learn Acrobat - Generative AI_2.pdf",
+      "Learn Acrobat - Request e-signatures_1.pdf",
+      "Learn Acrobat - Request e-signatures_2.pdf",
+      "Learn Acrobat - Share_1.pdf",
+      "Learn Acrobat - Share_2.pdf",
+      "Test Your Acrobat Exporting Skills.pdf",
+      "The Ultimate PDF Sharing Checklist.pdf"
+    ],
+    "persona": "HR professional",
+    "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
+    "processing_timestamp": "2025-07-20T22:17:55.604086"
+  },
+  "extracted_sections": [
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "Create a PDF and share the link for viewing or commenting",
+      "importance_rank": 4,
+      "page_number": 15
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "Create a PDF and send it for review",
+      "importance_rank": 4,
+      "page_number": 19
+    },
+    {
+      "document": "Learn Acrobat - Export_1.pdf",
+      "section_title": "Management , Conversion , and Extraction settings for the file type.",
+      "importance_rank": 4,
+      "page_number": 26
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Fill and Sign PDF Forms",
+      "importance_rank": 4,
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Fill and sign PDF forms",
+      "importance_rank": 4,
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Share_2.pdf",
+      "section_title": "The Draw tool creates free-form drawings, and the Erase a",
+      "importance_rank": 4,
+      "page_number": 9
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "the File menu (macOS)  > Create and then select the",
+      "importance_rank": 3,
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "the File menu (macOS) > Create from scanner and follow",
+      "importance_rank": 3,
+      "page_number": 3
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "toolbar, select Adobe Acrobat > Create and Share Adobe",
+      "importance_rank": 3,
+      "page_number": 3
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "select Web page as the file type and follow through the",
+      "importance_rank": 3,
+      "page_number": 4
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "files, digital images, and more. Di\ufb00erent types of sources have di\ufb00erent tools available for PDF",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "Every PDF balances e\ufb03ciency (small file size) and quality (such as resolution and color). If the",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "balance between the file size and the quality is critical to your task, you must use an",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "For example, you can drag files to the Acrobat icon to create PDFs. In this case, Acrobat",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "file type and then select the file that you want to convert to",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "the File menu (macOS)  > Create and then select the",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "appropriate file type and follow through the steps.",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "Method 2 : Drag and drop a file from your system to the",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "Method 3: Right-click on the file and then select Convert to",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "Method 4: Open the file in its source application and go",
+      "page_number": 3
+    }
+  ]
+}
