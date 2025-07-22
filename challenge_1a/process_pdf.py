@@ -1,5 +1,3 @@
-# main.py
-
 import os
 from pdf_loader import extract_text_blocks
 from title_detector import detect_title
@@ -15,8 +13,8 @@ def process_pdf(pdf_path, output_path):
     write_json(output_path, title, outline)
 
 def main():
-    input_dir = "sample_dataset/pdfs"
-    output_dir = "sample_dataset/output"
+    input_dir = "Challenge_1a/sample_dataset/pdfs"
+    output_dir = "Challenge_1a/sample_dataset/output"
 
     for filename in os.listdir(input_dir):
         if filename.endswith(".pdf"):

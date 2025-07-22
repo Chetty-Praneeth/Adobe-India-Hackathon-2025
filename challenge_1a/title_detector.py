@@ -3,7 +3,7 @@ def detect_title(blocks, page_width=595):  # default A4 width in points
         b for b in blocks if b["page"] == 1 and b["font_size"] > 10
     ]
 
-    # Sort by font size descending
+    
     candidates.sort(key=lambda b: b["font_size"], reverse=True)
 
     for block in candidates:

@@ -4,20 +4,15 @@ import argparse
 import datetime
 import sys
 from pathlib import Path
-from pathlib import Path
 
-# Add the parent directory to sys.path to access challenge_1a modules
+# Add Challenge 1A folder to import modules
 sys.path.append(str(Path(__file__).resolve().parents[1] / "challenge_1a"))
-from heading_extractor import extract_headings_from_pdf  # from Challenge 1A
-from pdf_loader import extract_text_blocks              # from Challenge 1A
+from heading_extractor import extract_headings_from_pdf
+from pdf_loader import extract_text_blocks
 
-# Simple keyword matching for relevance scoring
 def compute_relevance(text, keywords):
-    score = 0
-    for word in keywords:
-        if word.lower() in text.lower():
-            score += 1
-    return score
+    text_lower = text.lower()
+    return sum(1 for word in keywords if word in text_lower)
 
 def analyze_collection(collection_path):
     input_path = Path(collection_path) / "challenge1b_input.json"
@@ -38,36 +33,32 @@ def analyze_collection(collection_path):
         filename = doc["filename"]
         file_path = Path(collection_path) / "PDFs" / filename
 
-        # Extract headings using Challenge 1A tools
         headings = extract_headings_from_pdf(file_path)
         blocks = extract_text_blocks(file_path)
 
+        # Find relevant headings
         for heading in headings:
-            text = heading["text"]
-            score = compute_relevance(text, keywords)
+            score = compute_relevance(heading["text"], keywords)
             if score >= 1:
                 extracted_sections.append({
                     "document": filename,
-                    "section_title": text,
+                    "section_title": heading["text"],
                     "importance_rank": score,
                     "page_number": heading["page"]
                 })
 
-        # Now grab page-wise refined content
+        # Find relevant body paragraphs
         for block in blocks:
-            text = block["text"]
-            page = block["page"]
-            score = compute_relevance(text, keywords)
-            if score >= 2:  # more strict for refined content
+            score = compute_relevance(block["text"], keywords)
+            if score >= 2:
                 subsection_analysis.append({
                     "document": filename,
-                    "refined_text": text.strip(),
-                    "page_number": page
+                    "refined_text": block["text"].strip(),
+                    "page_number": block["page"]
                 })
 
-    # Sort based on importance score
+    # Sort and limit to top 10
     extracted_sections.sort(key=lambda x: -x["importance_rank"])
-
     output_data = {
         "metadata": {
             "input_documents": [doc["filename"] for doc in documents],
@@ -85,8 +76,7 @@ def analyze_collection(collection_path):
     print(f"Analysis complete: {output_path}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Analyze PDF collection for Challenge 1B")
-    parser.add_argument("collection_path", type=str, help="Path to the collection folder")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("collection_path", type=str)
     args = parser.parse_args()
-
     analyze_collection(args.collection_path)

@@ -1,3 +1,5 @@
+# heading_extractor.py
+
 def extract_heading_candidates(blocks):
     candidates = []
 
@@ -6,26 +8,27 @@ def extract_heading_candidates(blocks):
         font_size = block["font_size"]
         bold = block["bold"]
 
-        # Basic filters
-        if len(text.split()) > 12:
-            continue  # too long to be a heading
+        # Filter based on visual cues
+        if len(text.strip()) == 0 or len(text.split()) > 12:
+            continue  # too long or empty
 
         if font_size < 10:
             continue  # probably body text
 
         if not bold and not text.isupper():
-            continue  # we prefer bold or uppercase headings
+            continue  # headings tend to be bold or uppercase
 
         candidates.append(block)
 
     return candidates
 
-if __name__ == "__main__":
+
+def extract_headings_from_pdf(pdf_path):
     from pdf_loader import extract_text_blocks
-    blocks = extract_text_blocks("sample.pdf")
+    from heading_classifier import classify_headings
 
-    from heading_extractor import extract_heading_candidates
-    headings = extract_heading_candidates(blocks)
+    blocks = extract_text_blocks(pdf_path)
+    candidates = extract_heading_candidates(blocks)
+    headings = classify_headings(candidates)
 
-    for h in headings:
-        print(f"{h['text']} (Font: {h['font_size']}, Page: {h['page']})")
+    return headings
