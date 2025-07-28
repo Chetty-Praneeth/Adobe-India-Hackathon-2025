@@ -97,7 +97,3 @@ pip install -r requirements.txt
 ```
 
 ---
-
-## Team
-
-Built by Praneeth and Bindhu.
