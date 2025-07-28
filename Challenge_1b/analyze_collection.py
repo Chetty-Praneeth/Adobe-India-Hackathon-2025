@@ -4,9 +4,10 @@ import argparse
 import datetime
 import sys
 from pathlib import Path
+sys.path.append(os.path.dirname(__file__))
 
 # Add Challenge 1A folder to import modules
-sys.path.append(str(Path(__file__).resolve().parents[1] / "challenge_1a"))
+sys.path.append(str(Path(__file__).resolve().parents[1] / "Challenge_1a"))
 from heading_extractor import extract_headings_from_pdf
 from pdf_loader import extract_text_blocks
 
