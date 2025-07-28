@@ -1,4 +1,4 @@
-# PDF Outline Extractor – Challenge 1B
+# Challenge 1B
 
 This project is the second part of a document understanding pipeline, where we go beyond just extracting structure and dive into **personalized, context-aware document summarization**. Designed for scenarios where a user (persona) is trying to achieve a specific task using a collection of PDFs, this solution ranks and extracts the most relevant sections and subsections — as if the system were tailored just for them.
 
